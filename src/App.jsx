@@ -1078,8 +1078,11 @@ const handleCheckConnections = useCallback((result, options = {}) => {
                           &times;
                         </button>
                       </div>
-                      
+                       
+
                         <div className="instructions-body">
+                          <p className="instructions-note"><strong>AI Guide</strong>The AI guide will assist you in performing the
+              simulation accurately at each step.</p>
                         <p className={isStepActive(STEPS.CONNECT) ? 'instruction-step-active' : (isStepCompleted(STEPS.CONNECT) ? 'instruction-step-completed' : '')}>
                           <strong>Step 1:</strong> Make connections as per the instructions given below or you can click the <strong>AUTOCONNECT</strong> button to make the connections automatically.
                         </p>
