@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import InductorImg from '../assets/inductor.png';
+import FiveHenryInductorImg from '../assets/5H_inductor.png';
 import '../App.css';
 
 const Inductor = ({ onValueChange, disabled = false, selectedValue: controlledValue }) => {
   const [internalValue, setInternalValue] = useState('');
   const selectedValue = controlledValue !== undefined ? controlledValue : internalValue;
+  const displayedImage = selectedValue === '5' ? FiveHenryInductorImg : InductorImg;
 
   const handleValueChange = (event) => {
     const value = event.target.value;
@@ -23,8 +25,8 @@ const Inductor = ({ onValueChange, disabled = false, selectedValue: controlledVa
 
         <div className="inductor-asset-wrapper">
           <img 
-            src={InductorImg} 
-            alt="Inductor Asset" 
+            src={displayedImage}
+            alt={`${selectedValue || 'Unselected'} H inductor`}
             className="inductor-asset-graphic" 
           />
         </div>

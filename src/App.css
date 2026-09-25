@@ -3339,7 +3339,7 @@ Base modal container
 
   position: absolute;
   left: calc(50% - 23px);
-  top: 125px;
+  top: 190px;
   pointer-events: auto;
   cursor: pointer;
   font-family: 'Arial', sans-serif;
@@ -3682,8 +3682,8 @@ Base modal container
   /* 📍 2. MOVE THE LABEL HERE */
   position: relative;
   /* Positive values move it right/down; negative values move it left/up */
-  left: 50px;      /* Nudge it right to align over your shifted graphic */
-  top: 160px;      /* Nudge it up or down (e.g., 15px to push down) */
+  left: 20px;      /* Nudge it right to align over your shifted graphic */
+  top: 230px;      /* Nudge it up or down (e.g., 15px to push down) */
 }
 
 /* ==========================================================================
@@ -3693,8 +3693,11 @@ Base modal container
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
   width: 140px;  /* Keep the base layout footprint safe so it doesn't push elements away */
   height: 270px; 
+  left: -30px;
+    /* Nudge left/right to align with the label and other components */
 
   /* 🚀 FORCE ENLARGEMENT HERE */
   /* 1.0 = 100%, 1.5 = 150%, 2.0 = 200%, etc. */
@@ -3749,6 +3752,8 @@ Base modal container
   /* 📐 1. RESIZE THE BASE CONTAINER BOUNDS HERE */
   width: 90px;   
   height: 180px; 
+    left: -45px;
+
 
  
   transform: translate(-500px, 150px) scale(2.2); 
@@ -4025,6 +4030,8 @@ Base modal container
   font-size: 13px;
   line-height: 1.7;
   color: #3d2b1f;
+  text-align: justify;
+  text-justify: inter-word;
   overflow-wrap: anywhere;
 }
 
