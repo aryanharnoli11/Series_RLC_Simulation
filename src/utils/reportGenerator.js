@@ -57,7 +57,6 @@ const THEORETICAL_COLUMNS = [
   ['V<sub>C</sub>', '(V)', 'vC'],
   ['Error', '(%)', 'vCError'],
   ['cosφ', ' ', 'cosPhi'],
-  ['Error', '(%)', 'cosPhiError'],
   ['Power', '(W)', 'power'],
   ['Error', '(%)', 'powerError'],
 ]
@@ -229,6 +228,9 @@ ul {
   column-gap: 32px;
   list-style-position: inside;
   margin-top: 10px;
+}
+.report-summary > p {
+  text-align: justify;
 }
 .report-overview-top {
   display: flex;

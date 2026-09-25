@@ -24,6 +24,8 @@ const CALCULATED_FIELDS = [
   { key: 'power', label: <>Power<br />(W)</>, dataLabel: 'Power', errorLabel: <>P error</>, min: 0, max: 50 },
 ]
 
+const ERROR_ANALYSIS_FIELDS = CALCULATED_FIELDS.filter(({ key }) => key !== 'cosPhi')
+
 const ALL_FIELDS = [...KNOWN_FIELDS, ...CALCULATED_FIELDS]
 const EMPTY_ROW = Object.fromEntries(ALL_FIELDS.map(({ key }) => [key, '']))
 
@@ -496,7 +498,7 @@ const handleFieldChange = (rowId, key, value) => {
                     </small>
                   </div>
                   <div className="calculation-error-grid">
-                    {CALCULATED_FIELDS.map(({ key, errorLabel }) => {
+                    {ERROR_ANALYSIS_FIELDS.map(({ key, errorLabel }) => {
                       const error = statuses ? getPercentError(tableValues[key], theoretical[key]) : null
                       const status = statuses?.[key]
                       return (
